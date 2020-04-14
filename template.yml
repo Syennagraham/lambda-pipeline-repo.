@@ -10,7 +10,7 @@ Resources:
       AutoPublishAlias: live
       DeploymentPreference:
           # Specifies the deployment configuration      
-          Type: Linear80PercentEvery1Minute
+          Type: AllAtOnce
       Policies:
         - Version: "2012-10-17"
           Statement: 
