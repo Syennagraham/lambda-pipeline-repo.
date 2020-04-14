@@ -7,6 +7,17 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs10.x
+      AutoPublishAlias: live
+      DeploymentPreference:
+          # Specifies the deployment configuration      
+          Type: Linear80PercentEvery1Minute
+      Policies:
+        - Version: "2012-10-17"
+          Statement: 
+          - Effect: "Allow"
+            Action: 
+              - "lambda:InvokeFunction"
+            Resource: '*'      
       CodeUri: ./
       Events:
         MyTimeApi:
