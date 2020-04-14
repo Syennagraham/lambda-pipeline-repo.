@@ -4,7 +4,7 @@ exports.handler = (event, context, callback) => {
     currentTime.setTimezone("America/Los_Angeles");
     callback(null, {
         statusCode: '200',
-        body: 'The good time in florida is: ' + currentTime.toString(),
+        body: 'The good time in colarado is: ' + currentTime.toString(),
     });
 };
 
