@@ -3,6 +3,12 @@ Transform: AWS::Serverless-2016-10-31
 Description: Outputs the time
 Resources:
 
+  MainKinesisStream:
+    Type: AWS::Kinesis::Stream
+    Properties:
+      Name: auspex-main-stream
+      ShardCount: 1
+
   TimeFunction:
     Type: AWS::Serverless::Function
     Properties:
